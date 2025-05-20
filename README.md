@@ -1,12 +1,56 @@
-# React + Vite
+# 📚 **Edvana – Free YouTube Course Hub**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Edvana** is an EdTech platform that curates the best **free courses from YouTube** and organizes them in one clean, user-friendly space. Whether you're learning to code, design, market, or just explore new skills — Edvana makes it easy, accessible, and free.
 
-Currently, two official plugins are available:
+## 🌟 **Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎥 Curated YouTube playlists and videos across multiple categories
+- 🔍 Search and filter functionality for easy discovery
+- 📱 Fully responsive design for mobile and desktop
+- 🧠 Topics include Web Development, Data Science, Design, Business, and more
+- 💯 No signup or payment required – 100% free content
+- 🔗 Direct YouTube integration for fast, smooth viewing
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 **Live Demo**
+
+👉 View Live Website:- 
+
+
+## 🛠️ **Tech Stack**
+
+- **Frontend**: React.js
+- **Styling**: Tailwind CSS
+- **Icons**: Font Awesome
+- **Data Source**: Curated YouTube URLs (can be expanded with YouTube Data API)
+  
+
+## 🧑‍💻 **Getting Started**
+
+To run this project locally:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/edvana.git
+   cd edvana
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+
+🌱 **Contributing**
+Got ideas or want to help improve Edvana?
+Feel free to fork the project and submit a pull request!
+
+
+🙌 **Acknowledgements**
+YouTube Creators – for making quality education accessible
+
+
+Built with ❤️ to support free, open learning for everyone.
