@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="footer bg-[#FAFAFB] px-20 py-2 h-[55vh] pt-15 flex flex-col justify-center items-center">
       <div className="company-name flex items-center text-2xl font-bold">
-        <img className="ml-4" src={logo2} alt="" /> ElevateU
+        <img className="ml-4" src={logo2} alt="" /> Edvana
       </div>
 
       <div className="newsletter mt-6">
