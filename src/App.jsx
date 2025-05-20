@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import CoursePlayer from "./pages/CoursePlayer";
 import CourseOverview from "./pages/CourseOverview";
 import { AuthContext } from "./context/AuthProvider";
-import { getLocalStorage, setLocalStorage } from "../util/LoggedInUserData";
+import { getLocalStorage, setLocalStorage } from "./util/LoggedInUserData";
 
 const App = () => {
   const {
