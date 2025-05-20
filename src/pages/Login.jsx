@@ -1,8 +1,6 @@
 import React from "react";
 import Form from "../components/login/Form";
-import MoreMethods from "../components/login/MoreMethods";
 import { useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -26,8 +24,6 @@ const Login = ({ setIsLoggedIn }) => {
         <div className="divide mt-1">
           <hr />
         </div>
-
-        {/* <MoreMethods setIsLoggedIn={setIsLoggedIn} /> */}
 
         <div className="newUser text-sm text-center">
           <span className="black mr-4">Need to create an account? </span>
