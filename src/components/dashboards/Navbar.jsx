@@ -58,7 +58,7 @@ const NavBar = () => {
       <div className="left flex h-[100%] pb-1">
         <div className="logo flex items-center gap-2">
           <img className="h-[45px]" src={logo} alt="logo of company" />
-          <h1 className="text-2xl font-bold">ElevateU</h1>
+          <h1 className="text-2xl font-bold">Edvana</h1>
         </div>
 
         <div className="navs flex items-center text-sm gap-2 ml-10 h-[100%]">
