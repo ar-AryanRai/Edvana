@@ -8,10 +8,10 @@ import Dashboard from "./pages/Dashboard";
 import CoursePlayer from "./pages/CoursePlayer";
 import CourseOverview from "./pages/CourseOverview";
 import { AuthContext } from "./context/AuthProvider";
+import { getLocalStorage, setLocalStorage } from "../util/LoggedInUserData";
 
 const App = () => {
   const {
-    userData,
     setUserData,
     isLoggedIn,
     setIsLoggedIn,
@@ -19,12 +19,18 @@ const App = () => {
     setUserList,
   } = useContext(AuthContext);
 
+  const { userData } = getLocalStorage();
+  
   const [userId, setUserId] = useState(2);
 
   useEffect(() => {
     const isLoggedInStr = localStorage.getItem("isLoggedIn");
     const isLoggedInValue = isLoggedInStr ? JSON.parse(isLoggedInStr) : false;
     setIsLoggedIn(isLoggedInValue);
+
+    if (!userData) {
+      setLocalStorage();
+    }
   }, [isLoggedIn]);
 
   // ap key 1 => AIzaSyCEttPIiBlYlaAIfHrRzl5zpHivH4UAqY8  ----
@@ -34,7 +40,7 @@ const App = () => {
   // ap key 5 => AIzaSyBwsteUck3etKTvqOtQeGeL2DUZiHcxNvY  ----
   // ap key 6 => AIzaSyB4C_eSZL7B-n2TpgJVMkSOsMCYCp6pp1w  ----
 
-  const apiKey = "AIzaSyCEttPIiBlYlaAIfHrRzl5zpHivH4UAqY8";
+  const apiKey = "AIzaSyAWtm5ijJWrGXTor43HiIbl2idQ9hDfxGo";
 
   return (
     <>
