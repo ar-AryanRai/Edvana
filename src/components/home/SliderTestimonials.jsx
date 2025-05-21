@@ -60,7 +60,7 @@ const SliderTestimonials = () => {
             ))}
           </div>
 
-          <div className="review mb-10">{data[i].review}</div>
+          <div className="review mb-4">{data[i].review}</div>
           <div className="name font-bold">{data[i].name}</div>
           <div className="text-sm">{data[i].courseName}</div>
 
