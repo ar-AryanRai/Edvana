@@ -5,6 +5,7 @@ import {
   faCircleRight,
 } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import data from "../../util/reviewData";
 
 const SliderTestimonials = () => {
   const [i, setI] = useState(0);
