@@ -39,7 +39,7 @@ const defaultUserData = {
     }
 
 export function setLocalStorage() {
-  if (typeof window !== "undefined") {
+  if (typeof window == "undefined") {
     if (!localStorage.getItem("userList")) {
       localStorage.setItem("userList", JSON.stringify(userList));
     }
