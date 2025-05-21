@@ -12,11 +12,6 @@
 - 🔗 Direct YouTube integration for fast, smooth viewing
 
 
-## 🚀 **Live Demo**
-
-👉 View Live Website:- 
-
-
 ## 🛠️ **Tech Stack**
 
 - **Frontend**: React.js
