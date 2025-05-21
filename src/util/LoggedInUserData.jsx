@@ -71,13 +71,13 @@ export function getLocalStorage() {
     userData: defaultUserData,
   };
 
-  const userList = localStorage.getItem("userList");
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
-  const userData = localStorage.getItem("userData");
+  const userListStr = localStorage.getItem("userList");
+  const isLoggedInStr = localStorage.getItem("isLoggedIn");
+  const userDataStr = localStorage.getItem("userData");
 
   return {
-    userList: userList ? JSON.parse(userList) : [],
-    isLoggedIn: isLoggedIn ? JSON.parse(isLoggedIn) : false,
-    userData: userData ? JSON.parse(userData) : defaultUserData,
+    userList: userListStr ? JSON.parse(userListStr) : [],
+    isLoggedIn: isLoggedInStr ? JSON.parse(isLoggedInStr) : false,
+    userData: userDataStr ? JSON.parse(userDataStr) : defaultUserData,
   };
 }
