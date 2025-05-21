@@ -29,20 +29,30 @@ const userList = [
   },
 ];
 
-export function setLocalStorage() {
-  localStorage.setItem("userList", JSON.stringify(userList));
-  localStorage.setItem("isLoggedIn", JSON.stringify(false));
-  localStorage.setItem(
-    "userData",
-    JSON.stringify({
+const defaultUserData = {
       name: "",
       email: "",
       password: "",
       completedCourses: [],
       enrolledCourses: [],
       notes: [],
-    })
-  );
+    }
+
+export function setLocalStorage() {
+  if (typeof window !== "undefined") {
+    if (!localStorage.getItem("userList")) {
+      localStorage.setItem("userList", JSON.stringify(userList));
+    }
+    if (!localStorage.getItem("isLoggedIn")) {
+      localStorage.setItem("isLoggedIn", JSON.stringify(false));
+    }
+    if (!localStorage.getItem("userData")) {
+      localStorage.setItem("userData", JSON.stringify(defaultUserData));
+    }
+  }
+  // localStorage.setItem("userList", JSON.stringify(userList));
+  // localStorage.setItem("isLoggedIn", JSON.stringify(false));
+  // localStorage.setItem("userData", JSON.stringify(defaultUserData));
 }
 
 export function getLocalStorage() {
@@ -53,5 +63,21 @@ export function getLocalStorage() {
     userList: JSON.parse(userList),
     isLoggedIn: JSON.parse(isLoggedIn),
     userData: JSON.parse(userData),
+  };
+
+  if (typeof window === "undefined") return {
+    userList: [],
+    isLoggedIn: false,
+    userData: defaultUserData,
+  };
+
+  const userList = localStorage.getItem("userList");
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const userData = localStorage.getItem("userData");
+
+  return {
+    userList: userList ? JSON.parse(userList) : [],
+    isLoggedIn: isLoggedIn ? JSON.parse(isLoggedIn) : false,
+    userData: userData ? JSON.parse(userData) : defaultUserData,
   };
 }
