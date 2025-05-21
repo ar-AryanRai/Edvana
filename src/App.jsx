@@ -33,13 +33,6 @@ const App = () => {
     }
   }, [isLoggedIn]);
 
-  // ap key 1 => AIzaSyCEttPIiBlYlaAIfHrRzl5zpHivH4UAqY8  ----
-  // ap key 2 => AIzaSyDaxEFaQrLgg7wo02ewTIsVYoZMRBgTVYE  ----
-  // ap key 3 => AIzaSyAWtm5ijJWrGXTor43HiIbl2idQ9hDfxGo  ----
-  // ap key 4 => AIzaSyAWA-92T5mqDbHwDd2u4ghLVqEly1tgXP4  ----
-  // ap key 5 => AIzaSyBwsteUck3etKTvqOtQeGeL2DUZiHcxNvY  ----
-  // ap key 6 => AIzaSyB4C_eSZL7B-n2TpgJVMkSOsMCYCp6pp1w  ----
-
   const apiKey = "AIzaSyAWtm5ijJWrGXTor43HiIbl2idQ9hDfxGo";
 
   return (
