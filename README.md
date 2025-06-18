@@ -38,6 +38,13 @@ To run this project locally:
    npm run dev
    ```
 
+---
+
+## 🙋‍♂️ About Me
+Hi, I’m Aryan Rai — passionate about crafting clean and interactive web experiences.
+🎯 [Portfolio](aryan-rai-portfolio.netlify.app) | 💼 [LinkedIn](https://linkedin.com/in/aryanrai823)
+
+---
 
 🌱 **Contributing**
 Got ideas or want to help improve Edvana?
