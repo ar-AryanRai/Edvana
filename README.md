@@ -17,7 +17,7 @@
 - **Frontend**: React.js
 - **Styling**: Tailwind CSS
 - **Icons**: Font Awesome
-- **Data Source**: Curated YouTube URLs (can be expanded with YouTube Data API)
+- **Data Source**: Curated YouTube URLs (using YouTube Data API)
   
 
 ## 🧑‍💻 **Getting Started**
