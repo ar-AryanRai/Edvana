@@ -51,7 +51,7 @@ const Courses = ({ isLoggedIn, setIsLoggedIn, apiKey }) => {
 
       {!searched ? (
         <>
-          <div className="explore relative  w-[100%] h-[85vh] bg-[url('https://static.vecteezy.com/system/resources/previews/001/937/625/non_2x/online-education-application-learning-worldwide-on-phone-mobile-website-background-social-distance-concept-the-classroom-training-course-library-illustration-flat-design-vector.jpg')] bg-cover bg-no-repeat bg-center">
+          <div className="explore relative ml-[10%] w-[80%] h-[70vh] bg-[url('https://static.vecteezy.com/system/resources/previews/001/937/625/non_2x/online-education-application-learning-worldwide-on-phone-mobile-website-background-social-distance-concept-the-classroom-training-course-library-illustration-flat-design-vector.jpg')] bg-cover bg-no-repeat bg-center">
             <div className="texts w-[30%] h-[40%] absolute bottom-20 left-[45%] px-10 py-5 text-white">
               <h1 className="text-5xl font-bold mb-8">Explore Courses</h1>
 
