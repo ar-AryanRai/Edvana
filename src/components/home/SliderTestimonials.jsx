@@ -1,0 +1,102 @@
+import React, { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleLeft,
+  faCircleRight,
+} from "@fortawesome/free-regular-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import data from "../../util/reviewData";
+
+const SliderTestimonials = () => {
+  const [i, setI] = useState(0);
+  const intervalRef = useRef(null);
+
+  // ✅ Interval function using latest state
+  const startInterval = () => {
+    intervalRef.current = setInterval(() => {
+      setI((prev) => (prev + 1) % data.length); // safe state update
+    }, 2000);
+  };
+
+  useEffect(() => {
+    startInterval();
+    return () => clearInterval(intervalRef.current); // cleanup on unmount
+  }, []);
+
+  const resetInterval = () => {
+    clearInterval(intervalRef.current);
+    startInterval();
+  };
+
+  const handleClickLeft = () => {
+    setI((prev) => (prev === 0 ? data.length - 1 : prev - 1));
+    resetInterval();
+  };
+
+  const handleRightClick = () => {
+    setI((prev) => (prev + 1) % data.length);
+    resetInterval();
+  };
+
+  return (
+    <div className="review-slider-container bg-[#0F172A]">
+      <div
+        className="review-slider relative bg-[#1E293B] px-10 py-4 gap-10 w-[80%] ml-[10%] mt-5 h-[35vh] rounded-lg mb-10 flex texxt-white"
+        key={i}
+      >
+        <div
+          className="left w-[25%] h-[100%] rounded-lg bg-cover bg-no-repeat bg-top-center"
+          style={{ backgroundImage: `url(${data[i].profilePic})` }}
+        ></div>
+
+        <div className="right h-[100%] px-2 py-4 w-[80%]">
+          <div className="stars mb-4">
+            {[...Array(5)].map((_, idx) => (
+              <FontAwesomeIcon
+                key={idx}
+                icon={faStar}
+                style={{ color: "#FFD43B", fontSize: "20px" }}
+              />
+            ))}
+          </div>
+
+          <div
+            className="review mb-4 text-[#CBD5E1]
+          "
+          >
+            {data[i].review}
+          </div>
+          <div className="name font-bold text-[#CBD5E1]">{data[i].name}</div>
+          <div className="text-sm text-[#CBD5E1]">{data[i].courseName}</div>
+
+          <div className="navigation flex absolute bottom-10 right-10">
+            <div
+              className="left-move cursor-pointer active:scale-90"
+              onClick={handleClickLeft}
+            >
+              <FontAwesomeIcon icon={faCircleLeft} color="#CBD5E1" />
+            </div>
+            <div className="circles flex items-center gap-1 mx-1">
+              {[...Array(data.length)].map((_, x) => (
+                <div
+                  key={x}
+                  className={`w-[12px] h-[12px] rounded-full ${
+                    i === x ? "bg-[#FACC15]" : "bg-white"
+                  }`}
+                ></div>
+              ))}
+            </div>
+            <div
+              className="right-move cursor-pointer active:scale-90"
+              onClick={handleRightClick}
+            >
+              <FontAwesomeIcon icon={faCircleRight} color="#CBD5E1" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SliderTestimonials;

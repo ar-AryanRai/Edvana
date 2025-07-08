@@ -1,0 +1,46 @@
+import React from "react";
+import Form from "../components/login/Form";
+import MoreMethods from "../components/login/MoreMethods";
+import { useNavigate } from "react-router-dom";
+// import { useAuth0 } from "@auth0/auth0-react";
+
+const Login = () => {
+  const navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    navigate("/signup");
+  };
+
+  return (
+    <div className="w-screen h-screen flex justify-center bg-[url('./images/login/login-background.png')] bg-cover">
+      <div className="glass h-[100%] w-[40%] px-25 flex flex-col gap-10 py-30">
+        <div className="heading w-[100%] text-center text-white">
+          <h1 className="text-4xl font-bold ">Access Account</h1>
+          <p className="mt-4 text-sm">
+            Access your account to continue learning
+          </p>
+        </div>
+
+        <Form />
+
+        <div className="divide mt-1 text-white">
+          <hr />
+        </div>
+
+        {/* <MoreMethods setIsLoggedIn={setIsLoggedIn} /> */}
+
+        <div className="newUser text-sm text-center">
+          <span className="black mr-6 text-white">Need to create an account? </span>
+          <span
+            className="new text-[#F97316] font-semibold cursor-pointer underline underline-offset-2 active:scale-90"
+            onClick={handleSignUpClick}
+          >
+            Sign Up
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
