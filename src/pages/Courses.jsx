@@ -51,7 +51,7 @@ const Courses = ({ isLoggedIn, setIsLoggedIn, apiKey }) => {
 
       {!searched ? (
         <>
-          <div className="explore relative  w-[100%] h-[70vh] bg-[url('./src/images/explore.jpg')] bg-cover bg-no-repeat bg-center">
+          <div className="explore relative  w-[100%] h-[70vh] bg-[url('../images/explore.jpg')] bg-cover bg-no-repeat bg-center">
             <div className="texts w-[30%] h-[40%] absolute bottom-20 left-50 px-10 py-5 text-white">
               <h1 className="text-5xl font-bold mb-8">Explore Courses</h1>
 
