@@ -28,7 +28,7 @@ const App = () => {
     }
   }, [isLoggedIn]);
 
-  const apiKey = "AIzaSyCJT_TYRg_EwH1PUaoVuiZ4IcnPx19adGA";
+  const apiKey = "AIzaSyCjHoUzusUoKU-shF4D5XlOUCHLktDc1LA";
 
   return (
     <>
