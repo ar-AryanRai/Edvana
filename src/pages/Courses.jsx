@@ -53,15 +53,6 @@ const Courses = ({ isLoggedIn, setIsLoggedIn, apiKey }) => {
       {!searched ? (
         <>
           <div className="explore relative ml-[5%] ml-[16%] w-[68%] h-[70vh] rounded-lg bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${coursePage})` }}>
-            <div className="texts w-[30%] h-[40%] absolute bottom-30 left-[60%] px-10 py-5 text-white">
-              <h1 className="text-5xl font-bold mb-8 hidden">Explore Courses</h1>
-
-              <p className="hidden">Learn something new today</p>
-
-              <div className="start bg-[#E63600] w-[40%] text-center py-2 mt-5 rounded-md ">
-                Start Learning
-              </div>
-            </div>
           </div>
           <PopularCourses fetchData={fetchData} />
           <OtherCourses fetchData={fetchData} />
