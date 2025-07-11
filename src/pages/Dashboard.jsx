@@ -3,7 +3,7 @@ import Navbar from "../components/dashboards/Navbar";
 import CompletedCourseList from "../components/dashboards/CompletedCourseList";
 import EnrolledCourseList from "../components/dashboards/EnrolledCourseList";
 import { AuthContext } from "../context/AuthProvider";
-import logo from "../images/dashboard1.png";
+import logo from "../images/dashboard2.png";
 import Footer from "../components/home/Footer";
 
 const Dashboard = () => {
@@ -108,7 +108,9 @@ const Dashboard = () => {
           )}
         </>
       ) : (
-        <img className="ml-[30%] w-[40%] h-[44vh] rounded-lg" src={logo} />
+        <div className="ml-[32%] w-[40%] h-[44vh] rounded-lg overflow-hidden relative">
+          <img className="w-[100%] h-[100%] rounded-lg" src={logo} />
+        </div>
       )}
 
       <Footer />
